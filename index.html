@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EcoMarket</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <header class="navbar">
+      <nav>
+        <ul class="menu">
+          <li><a href="#home" onclick="showSection('home')">Home</a></li>
+          <li class="dropdown">
+            <a href="#prodotti" class="dropbtn">Prodotti</a>
+            <div class="dropdown-content">
+              <a href="#cosmetici-ecologici" onclick="showSection('cosmetici-ecologici')">Cosmetici ecologici</a>
+              <a href="#prodotti-per-la-casa" onclick="showSection('prodotti-per-la-casa')">Prodotti per la casa</a>
+              <a href="#alimenti-biologici" onclick="showSection('alimenti-biologici')">Alimenti biologici</a>
+              <a href="#abbigliamento-sostenibile" onclick="showSection('abbigliamento-sostenibile')">Abbigliamento sostenibile</a>
+              <a href="#accessori-eco-friendly" onclick="showSection('accessori-eco-friendly')">Accessori eco-friendly</a>
+            </div>
+          </li>
+          <li><a href="#contatti" onclick="showSection('contatti')">Contatti</a></li>
+          <li><a href="#blog" onclick="showSection('blog')">Blog</a></li>
+          <li><a href="#testimonianze" onclick="showSection('testimonianze')">Testimonianze</a></li>
+          <li id="cart-icon">
+            <img src="/logos/cart2.svg" alt="Cart" />
+            <span id="cart-count">0</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="titolo">Benvenuti su <strong id="eco">Eco</strong>Market</h1>
+      <section id="home">
+        <h2>La nostra missione</h2>
+        <p>Vendiamo prodotti ecologici per un futuro sostenibile</p>
+        
+        <div class="gallery">
+          <div class="gallery-container">
+            <img src="https://thumbs.dreamstime.com/b/organic-food-logo-concept-ecomarket-organic-farm-labels-organic-food-logo-concept-120991271.jpg" alt="Image 1" class="gallery-image" />
+            <img src="https://thumbs.dreamstime.com/b/organic-food-logo-concept-ecomarket-organic-farm-labels-organic-food-logo-concept-120991271.jpg" alt="Image 2" class="gallery-image" />
+            <img src="https://thumbs.dreamstime.com/b/organic-food-logo-concept-ecomarket-organic-farm-labels-organic-food-logo-concept-120991271.jpg" alt="Image 3" class="gallery-image" />
+            <img src="https://thumbs.dreamstime.com/b/organic-food-logo-concept-ecomarket-organic-farm-labels-organic-food-logo-concept-120991271.jpg" alt="Image 4" class="gallery-image" />
+          </div>
+        </div>
+        <div class="product-categories">
+          <h3>Le nostre categorie di prodotti</h3>
+          <div id="typewriter-text"></div>
+        </div>
+        <button class="cta-button" onclick="showSection('prodotti')">Scopri i nostri prodotti</button>
+        
+        <!-- Banner promozionale -->
+        <div class="promo-banner" id="promo-banner">
+          <h3 id="promo-typewriter-text">Offerte Speciali!</h3>
+          <p>Scopri i nostri nuovi arrivi e approfitta delle offerte speciali!</p>
+          <button class="promo-button" onclick="showSection('prodotti')">Scopri di più</button>
+        </div>
+
+        <!-- Sezione Sostenibilità -->
+        <div class="sustainability-section">
+          <h3>Perché scegliere EcoMarket?</h3>
+          <p>EcoMarket si impegna a fornire prodotti ecologici e sostenibili che rispettano l'ambiente. Ecco cosa ci differenzia:</p>
+          <ul>
+            <li>Prodotti realizzati con materiali riciclati e biodegradabili</li>
+            <li>Imballaggi eco-friendly e riduzione degli sprechi</li>
+            <li>Supporto a produttori locali e pratiche di commercio equo</li>
+            <li>Trasparenza e tracciabilità della filiera produttiva</li>
+            <li>Iniziative per la riduzione dell'impronta di carbonio</li>
+          </ul>
+        </div>
+      </section>
+      <section id="prodotti">
+        <h2>I nostri prodotti</h2>
+        
+        <h3 id="cosmetici-ecologici">Cosmetici ecologici</h3>
+        <div class="product-box">
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/710WuKVS2GL.jpg" alt="Product 1" />
+            <button class="cart-button" onclick="addToCart('Product 1')">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/710WuKVS2GL.jpg" alt="Product 2" />
+            <button class="cart-button" onclick="addToCart('Product 2')">Add to Cart</button>
+          </div>
+        </div>
+        
+        <h3 id="prodotti-per-la-casa">Prodotti per la casa</h3>
+        <div class="product-box">
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/710WuKVS2GL.jpg" alt="Product 3" />
+            <button class="cart-button" onclick="addToCart('Product 3')">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/710WuKVS2GL.jpg" alt="Product 4" />
+            <button class="cart-button" onclick="addToCart('Product 4')">Add to Cart</button>
+          </div>
+        </div>
+        
+        <h3 id="alimenti-biologici">Alimenti biologici</h3>
+        <div class="product-box">
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/710WuKVS2GL.jpg" alt="Product 5" />
+            <button class="cart-button" onclick="addToCart('Product 5')">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/710WuKVS2GL.jpg" alt="Product 6" />
+            <button class="cart-button" onclick="addToCart('Product 6')">Add to Cart</button>
+          </div>
+        </div>
+        
+        <h3 id="abbigliamento-sostenibile">Abbigliamento sostenibile</h3>
+        <div class="product-box">
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/710WuKVS2GL.jpg" alt="Product 7" />
+            <button class="cart-button" onclick="addToCart('Product 7')">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/710WuKVS2GL.jpg" alt="Product 8" />
+            <button class="cart-button" onclick="addToCart('Product 8')">Add to Cart</button>
+          </div>
+        </div>
+        
+        <h3 id="accessori-eco-friendly">Accessori eco-friendly</h3>
+        <div class="product-box">
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/710WuKVS2GL.jpg" alt="Product 9" />
+            <button class="cart-button" onclick="addToCart('Product 9')">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="https://m.media-amazon.com/images/I/710WuKVS2GL.jpg" alt="Product 10" />
+            <button class="cart-button" onclick="addToCart('Product 10')">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+      <section id="contatti">
+        <h2>Contattaci</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div class="form-group">
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" name="cognome" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Telefono:</label>
+            <div style="display: flex; align-items: center;">
+              <select id="country-code" name="country-code" required>
+                <option value="+1">+1 (USA)</option>
+                <option value="+44">+44 (UK)</option>
+                <option value="+39">+39 (Italy)</option>
+                <option value="+33">+33 (France)</option>
+                <option value="+49">+49 (Germany)</option>
+                <!-- Add more country codes as needed -->
+              </select>
+              <input type="tel" id="telefono" name="telefono" required style="flex: 1; margin-left: 10px;" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="indirizzo">Indirizzo:</label>
+            <input type="text" id="indirizzo" name="indirizzo" required />
+          </div>
+          <div class="form-group">
+            <label for="country">Paese:</label>
+            <select id="country" name="country" required>
+              <option value="USA">USA</option>
+              <option value="UK">UK</option>
+              <option value="Italy">Italy</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <!-- Add more countries as needed -->
+            </select>
+          </div>
+          <div class="form-group" style="flex: 1 1 100%;">
+            <label for="messaggio">Messaggio:</label>
+            <textarea id="messaggio" name="messaggio" required></textarea>
+          </div>
+          <input type="submit" value="Invia" />
+        </form>
+        <div id="thank-you-message">Grazie per averci contattato!</div>
+        <div id="cart-summary">
+          <h3>Cart Summary</h3>
+          <ul id="cart-items"></ul>
+        </div>
+      </section>
+      <section id="blog">
+        <h2>Blog</h2>
+        <p>Welcome to our blog!</p>
+      </section>
+      <section id="testimonianze">
+        <h2>Testimonianze</h2>
+        <p>Read what our customers have to say!</p>
+      </section>
+    </main>
+    <footer id="piedi">
+      <p>&copy; 2025 EcoMarket</p>
+    </footer>
+  </body>
+</html>
